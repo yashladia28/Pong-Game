@@ -1,3 +1,132 @@
-{
-  "README.md": "# C++ Pong Game with Raylib\n\nA high-performance, feature-rich recreation of the classic Pong game built entirely in **C++** using the **Raylib** library. This project emphasizes real-time systems, object-oriented design, and physics-based gameplay mechanics.\n\n## 🚀 Features\n\n* **High Performance:** Achieves consistent 60 FPS real-time rendering.\n* **Advanced Physics:** Implemented wall bounce physics, velocity scaling, and spin-based ball reflections for realistic gameplay.\n* **Intelligent AI:** Designed paddle control logic with progressive difficulty curves to keep the challenge engaging.\n* **Persistent Storage:** Integrated high-score tracking using C++ file handling for data retention across sessions.\n* **Game Modes:** Supports both Single-player (vs. AI) and Multiplayer modes with restartable game-over states.\n* **Robust Architecture:** Organized using standard software engineering principles, featuring structured game states, menus, and scoring systems.\n\n## 🛠️ Technical Stack\n\n* **Language:** C++20\n* **Graphics Library:** [Raylib](https://www.raylib.com/)\n* **Build System:** CMake\n* **Core Concepts:** Object-Oriented Programming (OOP), Collision Detection, Data Persistence\n\n## 📋 Prerequisites\n\nBefore running this project, ensure you have the following installed:\n\n* A C++ compiler (GCC, Clang, or MSVC)\n* CMake (version 3.10 or higher)\n* Raylib library installed on your system\n\n## ⚙️ Installation & Setup\n\n1.  **Clone the Repository:**\n    ```bash\n    git clone [https://github.com/yourusername/cpp-raylib-pong.git](https://github.com/yourusername/cpp-raylib-pong.git)\n    cd cpp-raylib-pong\n    ```\n\n2.  **Build the Project:**\n    ```bash\n    mkdir build && cd build\n    cmake ..\n    make\n    ```\n\n3.  **Run the Game:**\n    ```bash\n    ./PongGame\n    ```\n\n## 🎮 Controls\n\n* **Player 1 (Left):** `W` (Up) / `S` (Down)\n* **Player 2 (Right):** `Up Arrow` / `Down Arrow`\n* **Menu Navigation:** Use mouse or keyboard to select game modes.\n\n## 🧠 What I Learned\n\nBuilding this project from scratch served as a deep dive into:\n* Managing a **Game Loop** and real-time state updates.\n* Implementing mathematical models for **collision detection** and **ball physics**.\n* Handling **File I/O** in C++ to maintain persistent high-score data.\n\n---"
-}
+Pong Game in C++ using Raylib
+
+This project is a complete implementation of the classic Pong game written in C++ using the Raylib graphics library. It demonstrates real-time rendering, keyboard input handling, basic AI behavior, collision physics, score tracking, and persistent high-score storage.
+
+The game supports multiple modes, spin mechanics on the ball, and acceleration-based difficulty progression. It is structured around a main game loop with clear state transitions and rendering stages.
+
+Features
+
+Implemented in C++ with Raylib
+
+60 FPS real-time game loop
+
+Single-player mode with AI opponent
+
+Two-player local multiplayer mode
+
+High-score arcade mode with persistent storage to file
+
+Ball spin and speed scaling based on paddle hit location
+
+Collision detection with paddles and screen boundaries
+
+Game over screen and restart mechanics
+
+Keyboard-based controls
+
+Simple menu system for selecting game mode
+
+Game Modes
+
+Single Player
+Play against a computer-controlled paddle with adaptive behavior.
+
+Two Player
+Local multiplayer where both paddles are controlled manually.
+
+High Score Mode
+Score as many points as possible and save the highest score to file.
+
+Controls
+Player 1
+
+W: Move paddle up
+
+S: Move paddle down
+
+Player 2 (Two-player mode)
+
+Up Arrow: Move paddle up
+
+Down Arrow: Move paddle down
+
+Menu and Game
+
+1: Single-player mode
+
+2: Two-player mode
+
+3: High-score mode
+
+Enter: Restart game after game over
+
+Esc: Quit game window
+
+Technical Details
+
+Language: C++
+
+Library: Raylib
+
+Rendering: 2D raster graphics
+
+Frame rate: 60 FPS
+
+Persistent high score saved using C++ file I/O
+
+AI paddle movement reacts to ball trajectory
+
+Spin and speed scaling based on collision position on paddle
+
+How to Build and Run
+
+Install Raylib (consult official Raylib documentation for your OS)
+
+Clone this repository
+
+Compile using a C++17-compatible compiler and link Raylib
+
+Example (Linux with g++ and pkg-config):
+
+g++ main.cpp -o pong `pkg-config --libs --cflags raylib`
+
+
+On Windows, compilation will depend on your Raylib setup (MinGW, MSVC, etc.). Follow the Raylib build guide and link the library accordingly.
+
+Run the compiled executable to start the game.
+
+File Structure
+
+main.cpp – game source code
+
+highscore.txt – auto-created file storing the best score
+
+Concepts Demonstrated
+
+event-driven loop programming
+
+state management
+
+basic physics and collision response
+
+AI-controlled entity movement
+
+persistent storage through file handling
+
+2D rendering and animation
+
+real-time input processing
+
+Future Improvements
+
+Sound effects and background music
+
+Customizable difficulty levels
+
+Pause menu
+
+Better AI prediction logic
+
+On-screen instructions overlay
+
+Separate classes for paddles and ball (OOP refactor)
