@@ -1,132 +1,75 @@
-Pong Game in C++ using Raylib
+# Pong Game in C++ using Raylib
 
-This project is a complete implementation of the classic Pong game written in C++ using the Raylib graphics library. It demonstrates real-time rendering, keyboard input handling, basic AI behavior, collision physics, score tracking, and persistent high-score storage.
+This repository contains a complete implementation of the classic Pong game written in C++ using the Raylib graphics library. The project demonstrates real-time rendering, keyboard input handling, game-state management, basic AI paddle behavior, collision physics, score tracking, and persistent high-score storage.
 
-The game supports multiple modes, spin mechanics on the ball, and acceleration-based difficulty progression. It is structured around a main game loop with clear state transitions and rendering stages.
+---
 
-Features
+## Features
 
-Implemented in C++ with Raylib
+- Implemented entirely in C++ using Raylib
+- 60 FPS real-time game loop
+- Single-player mode with AI opponent
+- Two-player local multiplayer mode
+- High-score arcade mode with persistent storage
+- Ball spin and progressive speed increase
+- Collision detection with paddles and screen edges
+- Restartable game-over state
+- Simple menu-based mode selection
+- Keyboard controls for both players
 
-60 FPS real-time game loop
+---
 
-Single-player mode with AI opponent
+## Game Modes
 
-Two-player local multiplayer mode
+| Mode | Description |
+|------|-------------|
+| Single Player | Play against an AI paddle |
+| Two Player | Local multiplayer mode |
+| High Score Mode | Try to achieve and save the highest score |
 
-High-score arcade mode with persistent storage to file
+High scores are written to `highscore.txt` using C++ file I/O.
 
-Ball spin and speed scaling based on paddle hit location
+---
 
-Collision detection with paddles and screen boundaries
+## Controls
 
-Game over screen and restart mechanics
+### Player 1
+- `W` move paddle up  
+- `S` move paddle down  
 
-Keyboard-based controls
+### Player 2 (Two-player mode)
+- `UP ARROW` move paddle up  
+- `DOWN ARROW` move paddle down  
 
-Simple menu system for selecting game mode
+### Menu and Game Actions
+- `1` Single-player mode  
+- `2` Two-player mode  
+- `3` High-score mode  
+- `ENTER` restart game after game over  
+- `ESC` quit game  
 
-Game Modes
+---
 
-Single Player
-Play against a computer-controlled paddle with adaptive behavior.
+## Technical Details
 
-Two Player
-Local multiplayer where both paddles are controlled manually.
+- Language: C++
+- Library: Raylib
+- Frame rate: 60 FPS
+- Rendering: 2D graphics primitives
+- Persistent high score using file handling
+- Spin mechanics and velocity scaling based on paddle hit position
+- AI paddle moves based on ball trajectory direction
 
-High Score Mode
-Score as many points as possible and save the highest score to file.
+---
 
-Controls
-Player 1
+## How to Build and Run
 
-W: Move paddle up
+### Prerequisite
 
-S: Move paddle down
+Install Raylib on your system. Follow the official Raylib documentation for your platform.
 
-Player 2 (Two-player mode)
+### Clone the repository
 
-Up Arrow: Move paddle up
-
-Down Arrow: Move paddle down
-
-Menu and Game
-
-1: Single-player mode
-
-2: Two-player mode
-
-3: High-score mode
-
-Enter: Restart game after game over
-
-Esc: Quit game window
-
-Technical Details
-
-Language: C++
-
-Library: Raylib
-
-Rendering: 2D raster graphics
-
-Frame rate: 60 FPS
-
-Persistent high score saved using C++ file I/O
-
-AI paddle movement reacts to ball trajectory
-
-Spin and speed scaling based on collision position on paddle
-
-How to Build and Run
-
-Install Raylib (consult official Raylib documentation for your OS)
-
-Clone this repository
-
-Compile using a C++17-compatible compiler and link Raylib
-
-Example (Linux with g++ and pkg-config):
-
-g++ main.cpp -o pong `pkg-config --libs --cflags raylib`
-
-
-On Windows, compilation will depend on your Raylib setup (MinGW, MSVC, etc.). Follow the Raylib build guide and link the library accordingly.
-
-Run the compiled executable to start the game.
-
-File Structure
-
-main.cpp – game source code
-
-highscore.txt – auto-created file storing the best score
-
-Concepts Demonstrated
-
-event-driven loop programming
-
-state management
-
-basic physics and collision response
-
-AI-controlled entity movement
-
-persistent storage through file handling
-
-2D rendering and animation
-
-real-time input processing
-
-Future Improvements
-
-Sound effects and background music
-
-Customizable difficulty levels
-
-Pause menu
-
-Better AI prediction logic
-
-On-screen instructions overlay
-
-Separate classes for paddles and ball (OOP refactor)
+```bash
+git clone https://github.com/your-username/pong-raylib-cpp.git
+cd pong-raylib-cpp
